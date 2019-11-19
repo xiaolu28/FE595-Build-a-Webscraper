@@ -23,8 +23,7 @@ for i in range(0, 50):
     time.sleep(1)
     resp = get("https://www.theyfightcrime.org/")
     txt0 = resp.text
-    txt1 = txt0.split("<P>") ### split the text by paragraph sign
-    txt2 = txt1[1] 
+    txt0 = txt0.split("<P>")[1] ### split the text by paragraph sign
     
     ### split txt2 by He's, the sentence is split into space (before He's) and text (after He's)
     mal = re.split(r"He's", txt2) 
